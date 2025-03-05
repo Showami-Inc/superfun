@@ -1,0 +1,794 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+
+ /*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+
+ /* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+ /* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --primary-color: #007bff;
+  --almost-white: #f9f9f9;
+  --pale-grey: #efefef;
+  --light-grey: #ddd;
+  --medium-grey: #999;
+  --medium-dark-grey: #888;
+  --dark-grey: #666;
+  --grey: #404040;
+  --black: #000;
+
+  --white: #ffffff;
+  --light-green: #9dbc89;
+  --green: #599700;
+  --dark-green: #477701;
+  --light-blue: #74afb8;
+  --new-light-blue: #d0e5e9;
+  --medium-blue: #668b9e;
+  --dark-blue: #38697a;
+  --light-orange: #ffa600;
+  --orange: #f05a28;
+  --dark-orange: #d23c0a;
+  --red: #a62121;
+  --dark-red: #791919;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+
+  .column,
+  .columns {
+    margin-left: 4%;
+  }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+
+  .one.column,
+  .one.columns {
+    width: 4.66666666667%;
+  }
+
+  .two.columns {
+    width: 13.3333333333%;
+  }
+
+  .three.columns {
+    width: 22%;
+  }
+
+  .four.columns {
+    width: 30.6666666667%;
+  }
+
+  .five.columns {
+    width: 39.3333333333%;
+  }
+
+  .six.columns {
+    width: 48%;
+  }
+
+  .seven.columns {
+    width: 56.6666666667%;
+  }
+
+  .eight.columns {
+    width: 65.3333333333%;
+  }
+
+  .nine.columns {
+    width: 74%;
+  }
+
+  .ten.columns {
+    width: 82.6666666667%;
+  }
+
+  .eleven.columns {
+    width: 91.3333333333%;
+  }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: #222;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: var(--dark-grey);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+h1.all-caps-bold {
+  font-size: 4rem;
+  font-weight: bold;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.1rem;
+
+  &.small {
+    font-size: 2.1rem;
+  }
+}
+
+h2.medium-blue {
+  font-size: 26px;
+  color: var(--dark-blue);
+}
+
+h2.small-blue {
+  font-size: 22px;
+  color: var(--dark-blue);
+}
+
+h2.all-caps-bold {
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+
+  &.small {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+
+  &.small {
+    font-size: 2.2rem;
+  }
+}
+
+h3.small-blue {
+  font-size: 20px;
+  color: var(--dark-blue);
+}
+
+h3.all-caps-bold {
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+
+h4.all-caps-bold {
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+h1.content-sized {
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+h2.content-sized {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+
+h3.content-sized {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+
+.flash-message {
+  margin-top: 1em;
+}
+
+.alert {
+  color: var(--dark-red);
+  border: 1px solid var(--dark-red);
+  background: var(--white);
+  margin: 0 0 1em;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.notice {
+  color: var(--dark-green);
+  border: 1px solid var(--dark-green);
+  background: var(--white);
+  margin: 0 0 1em;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.information {
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  background: var(--white);
+  margin: 0 0 1em;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: var(--light-blue);
+}
+
+a:hover {
+  color: var(--dark-blue);
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: var(--white);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--green);
+  border-radius: 4px;
+  border: 1px solid var(--green);
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: var(--white);
+  background-color: var(--dark-green);
+  border-color: var(--dark-green);
+}
+
+.button:disabled,
+button:disabled,
+input[type="submit"]:disabled,
+input[thpe="reset"]:disabled,
+input[thpe="button"]:disabled {
+  background-color: var(--light-grey);
+  border-color: var(--light-grey);
+  cursor: not-allowed;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  border: 1px solid var(--dark-blue);
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Removes default spinners on incrementable fields */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: 160px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  &.-small {
+    min-height: 80px;
+  }
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+label,
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+fieldset {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: var(--almost-white);
+  border: 1px solid var(--pale-grey);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+
+label>.label-body {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+.form-error {
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: none;
+}
+
+ul.marked {
+  list-style: disc inside;
+  padding-left: 1.5rem;
+}
+
+ul.checked {
+  list-style: none;
+}
+
+ul.checked li:before {
+  content: "✓";
+  padding-right: 1rem;
+}
+
+ul.checked.-green li:before {
+  content: "✓";
+  padding-right: 1rem;
+  color: var(--green);
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol.lettered {
+  list-style: lower-alpha;
+}
+
+ol.roman {
+  list-style: lower-roman;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--dark-blue);
+}
+
+th {
+  color: var(--dark-blue);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+  margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 2px solid var(--dark-blue);
+
+  &.thin {
+    border-top: 1px solid var(--light-grey);
+  }
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+
+.user-dashboard {
+  margin-top: 150px;
+
+  main {
+    position: relative;
+    padding-left: 280px;
+    padding-right: 50px;
+    max-width: 1250px;
+
+    @media (max-width: 800px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &.-centered {
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 900px;
+    }
+  }
+
+  h2.dashboard-header {
+    font-size: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 40px 0 40px 0;
+  }
+
+  .quick-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+  }
+
+  .quick-link {
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 15px;
+    color: var(--white);
+    text-align: left;
+    text-decoration: none;
+    font-size: 14px;
+
+    min-height: 200px;
+    padding-top: 112px;
+    max-width: 300px;
+
+    background-color: var(--dark-blue);
+    background-size: 75px;
+    background-position-x: 15px;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-color: lighten(var(--dark-blue), 10%);
+      color: white;
+      transition: all 0.6s ease 0s;
+    }
+
+    h3.title {
+      font-size: 24px;
+      font-family: "Roboto Condensed", sans-serif;
+      color: var(--white);
+      margin-top: auto;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.field_with_errors input,
+.field_with_errors textarea,
+input.field_with_errors,
+textarea.field_with_errors,
+.field_with_errors select,
+.field_with_errors .selectize-input {
+  border: 2px solid var(--dark-red) !important;
+}
+
+.field_with_errors label {
+  color: var(--dark-red);
+}
+
+.field_with_errors input:focus,
+.field_with_errors textarea:focus {
+  border: 2px solid var(--dark-red);
+  color: var(--dark-red);
+  outline: none;
+}
+
+.field_with_errors label {
+  color: var(--dark-red);
+}
+
+.field_with_errors .selectize-input input {
+  color: var(--black);
+}
+
+#error_explanation {
+  color: var(--red);
+
+  h4 {
+    color: var(--red);
+  }
+
+  h4.small {
+    font-size: 1.9rem;
+    color: var(--red);
+  }
+}
+
+.error_explanation {
+  color: var(--dark-red);
+  font-size: 1.4rem;
+}

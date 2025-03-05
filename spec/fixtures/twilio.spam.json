@@ -1,0 +1,26 @@
+{
+  "RecordType": "SpamComplaint",
+  "ID": 42,
+  "Type": "SpamComplaint",
+  "TypeCode": 100001,
+  "Tag": "Test",
+  "MessageID": "00000000-0000-0000-0000-000000000000",
+  "Details": "Test spam complaint details",
+  "Phone": "(555) 123-1234",
+  "Email": "user@example.com",
+  "From": "sender@example.com",
+  "BouncedAt": "2025-02-02T22:12:09Z",
+  "Inactive": true,
+  "DumpAvailable": true,
+  "CanActivate": true,
+  "Subject": "Test subject",
+  "ServerID": 1234,
+  "MessageStream": "outbound",
+  "Content": "Test content",
+  "Name": "Spam complaint",
+  "Description": "The subscriber explicitly marked this message as spam.",
+  "Metadata": {
+    "example": "value",
+    "example_2": "value"
+  }
+}
